@@ -5,9 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TripMate AI</title>
+    <title>TravelBuddy AI</title>
 
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style.css?v=3">
 </head>
 
 <body>
@@ -21,22 +21,22 @@
     <main class="app-container">
 
         <section class="hero-section">
-            <div class="badge">
-                ✈️ TripMate AI — A Multi-Agent Travel Planner with LangGraph
-            </div>
+            <div class="hero-copy">
+                <div class="badge">
+                    ✦ TravelBuddy AI — A multi-agent travel studio
+                </div>
 
-            <h1>
-                Plan Your Perfect Trip with AI
-            </h1>
+                
 
-            
+                
+
         </section>
 
         <section class="planner-card">
 
             <div class="card-header">
                 <div>
-                    <h2>Where do you want to go?</h2>
+                    <h2>Start planning your next escape</h2>
                     
                 </div>
 
@@ -49,7 +49,7 @@
             <div class="input-area">
                 <textarea
                     id="userInput"
-                    placeholder="Plan a complete 7 days Japan trip including flights, hotels and sightseeing under 2 lakhs..."
+                    placeholder="Plan a complete 7 day Japan trip including flights, hotels and sightseeing under Rs 2,00,000..."
                 ></textarea>
 
                 <button id="sendBtn" onclick="sendMessage()">
@@ -59,19 +59,19 @@
             </div>
 
             <div class="quick-prompts">
-                <button onclick="setPrompt('Plan a complete 7 days Japan trip from Bangladesh including flights, hotels and sightseeing under 2 lakhs.')">
+                <button onclick="setPrompt('Plan a complete 7 day Japan trip from Sri Lanka including flights, hotels and sightseeing under Rs 2,00,000.')">
                     Japan Trip
                 </button>
 
-                <button onclick="setPrompt('Plan a 5 days Dubai trip from Dhaka with flights, hotels and sightseeing.')">
+                <button onclick="setPrompt('Plan a 5 day Dubai trip from Sri Lanka with flights, hotels and sightseeing. Show all costs in Rs.')">
                     Dubai Trip
                 </button>
 
-                <button onclick="setPrompt('Plan a 7 days Thailand trip from Bangladesh with budget hotels and sightseeing.')">
+                <button onclick="setPrompt('Plan a 7 day Thailand trip from Sri Lanka with budget hotels and sightseeing. Show all costs in Rs.')">
                     Thailand Trip
                 </button>
 
-                <button onclick="setPrompt('Give me all country flight info.')">
+                <button onclick="setPrompt('Give me all country flight info and show every price in Rs.')">
                     Global Flights
                 </button>
             </div>
@@ -87,6 +87,8 @@
                 </div>
 
                 <div class="result-actions">
+                    <span class="currency-pill">All costs shown in Rs</span>
+
                     <button class="copy-btn" onclick="copyResult()">
                         Copy
                     </button>
@@ -109,7 +111,7 @@
     </main>
 
     <footer>
-        Built with FastAPI, LangGraph, Groq, PostgreSQL, Tavily and AviationStack
+        VoyageVista AI is built with FastAPI, LangGraph, Groq, PostgreSQL, Tavily and AviationStack
     </footer>
 
     <!-- Markdown Renderer -->

@@ -13,8 +13,8 @@ from backend import run_travel_agent
 BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI(
-    title="TripMate AI",
-    description="LangGraph Multi-Agent Travel Planner with FastAPI Frontend",
+    title="VoyageVista AI",
+    description="LangGraph multi-agent travel planner with a polished FastAPI frontend",
     version="1.0.0"
 )
 
@@ -96,7 +96,7 @@ async def travel_planner(request_data: TravelRequest):
 async def health_check():
     return {
         "status": "ok",
-        "message": "AI Travel Planner API is running"
+        "message": "VoyageVista AI API is running"
     }
 
 

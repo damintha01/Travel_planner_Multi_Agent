@@ -125,10 +125,11 @@ Hotel Results:
 {state['hotel_results']}
 
 Make the itinerary practical, budget-aware, and easy to follow.
+All monetary values must be shown in Rs.
 """
 
     response = llm.invoke([
-        SystemMessage(content="You are an expert travel planner."),
+        SystemMessage(content="You are an expert travel planner. Always present money in Rs."),
         HumanMessage(content=prompt)
     ])
 
@@ -173,10 +174,13 @@ Important:
 - Be clear and practical.
 - Mention that live flight API may not provide ticket prices if pricing is unavailable.
 - Keep the response useful for real travel planning.
+- Show every budget, fare, hotel estimate, transport estimate, and total in Rs.
+- Do not use $, USD, EUR, or any other currency symbol in the final answer.
+- If any source information is in another currency, convert it to Rs before presenting it.
 """
 
     response = llm.invoke([
-        SystemMessage(content="You are a professional AI travel booking assistant."),
+        SystemMessage(content="You are a professional AI travel booking assistant. Every monetary value must be shown in Rs."),
         HumanMessage(content=final_prompt)
     ])
 
